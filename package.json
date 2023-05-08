@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/oPablo-Santos/criptografia/issues"
   },
-  "homepage": "https://github.com/oPablo-Santos/criptografia#readme"
+  "homepage": "https://github.com/oPablo-Santos/criptografia#readme",
+  "dependencies": {
+    "jsonwebtoken": "8.5.1"
+  }
 }

@@ -34,4 +34,4 @@ const ehVerificado = verificador.verify(publicKey, assinatura, "hex");
 
 console.log(ehVerificado);
 
-//
+
