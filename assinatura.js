@@ -16,7 +16,7 @@ const { privateKey, publicKey } = generateKeyPairSync("rsa", {
 let dados = "Essa string vai ser assinada";
 
 // assinatura
-const assinador = createSign("rsa-sha265");
+const assinador = createSign("rsa-sha256");
 
 assinador.update(dados);
 
@@ -24,4 +24,14 @@ const assinatura = assinador.sign(privateKey, "hex");
 
 console.log(`assinatura: ${assinatura}`);
 
+// Envio desse documento
 
+const verificador = createVerify("rsa-sha256");
+
+verificador.update(dados);
+
+const ehVerificado = verificador.verify(publicKey, assinatura, "hex");
+
+console.log(ehVerificado);
+
+//
